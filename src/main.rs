@@ -1,14 +1,10 @@
 
 mod code150;
-use crate::code150::valid_anagram::Solution;
+use crate::code150::two_sum::Solution;
 
-fn main() { 
-   let s = String::from("anagram");
-   let t = String::from("nagaram");
-
-   if Solution::is_anagram(s.clone(), t.clone()) {
-       println!("{} and {} are anagrams.", s, t);
-   } else {
-       println!("{} and {} are not anagrams.", s, t);
-   }
+fn main() {
+    let nums = vec![2, 7, 11, 15];
+    let target = 9;
+    let result = Solution::two_sum(nums, target);
+    println!("{:?}", result);
 }
