@@ -1,11 +1,10 @@
 mod code150;
-use crate::code150::group_anagrams::Solution;
+
+use crate::code150::top_k_frequent::Solution;
 
 fn main() {
-    let strs = vec!["eat", "tea", "tan", "ate", "nat", "bat"]
-        .iter()
-        .map(|s| s.to_string())
-        .collect::<Vec<String>>();
-    let groups = Solution::group_anagrams(strs);
-    println!("{:?}", groups);
+    let nums = vec![1, 1, 1, 2, 2, 3];
+    let k = 2;
+    let result = Solution::top_k_frequent(nums, k);
+    println!("{:?}", result);
 }
