@@ -1,20 +1,9 @@
 mod code150;
 
-use crate::code150::valid_sudoku::Solution;
+use crate::code150::longest_consecutive_sequence::Solution;
 
 fn main() {
-    let board = vec![
-        vec!['5', '3', '.', '.', '7', '.', '.', '.', '.'],
-        vec!['6', '.', '.', '1', '9', '5', '.', '.', '.'],
-        vec!['.', '9', '8', '.', '.', '.', '.', '6', '.'],
-        vec!['8', '.', '.', '.', '6', '.', '.', '.', '3'],
-        vec!['4', '.', '9', '8', '.', '3', '.', '.', '1'],
-        vec!['7', '.', '.', '.', '2', '.', '.', '.', '6'],
-        vec!['.', '6', '.', '.', '.', '.', '2', '8', '.'],
-        vec!['.', '.', '.', '4', '1', '9', '.', '.', '5'],
-        vec!['.', '.', '.', '.', '8', '.', '.', '7', '9'],
-    ];
-    
-    let result = Solution::is_valid_sudoku(board);
-    println!("Is the Sudoku board valid? {}", result);
+    let nums = vec![1, 2, 3, 1];
+    let result = Solution::longest_consecutive(nums);
+    println!("The answer to this {}", result);
 }
