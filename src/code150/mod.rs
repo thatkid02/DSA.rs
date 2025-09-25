@@ -8,3 +8,4 @@ pub mod encode_decode;
 pub mod product_except_self;
 pub mod valid_sudoku;
 pub mod longest_consecutive_sequence;
+pub mod valid_palindrome;
