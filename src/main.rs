@@ -1,9 +1,10 @@
 mod code150;
 
-use crate::code150::valid_palindrome::Solution;
+use crate::code150::two_sum_sorted::Solution;
 
 fn main() {
-    let s = "A man, a plan, a canal: Panama".to_string();
-    let result = Solution::is_palindrome(s);
-    println!("The answer to this {}", result);
+   let numbers = vec![2, 7, 11, 15];
+   let target = 9;
+   let result = Solution::two_sum(numbers, target);
+   println!("The answer to this is {:?}", result);
 }
