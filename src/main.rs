@@ -1,10 +1,9 @@
 mod code150;
 
-use crate::code150::two_sum_sorted::Solution;
+use crate::code150::three_sum::Solution;
 
 fn main() {
-   let numbers = vec![2, 7, 11, 15];
-   let target = 9;
-   let result = Solution::two_sum(numbers, target);
+   let numbers = vec![-1, 0, 1, 2, -1, -4];
+   let result = Solution::three_sum(numbers);
    println!("The answer to this is {:?}", result);
 }
