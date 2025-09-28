@@ -11,3 +11,4 @@ pub mod longest_consecutive_sequence;
 pub mod valid_palindrome;
 pub mod two_sum_sorted;
 pub mod three_sum;
+pub mod contain_water;

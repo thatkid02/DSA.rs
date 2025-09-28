@@ -1,9 +1,9 @@
 mod code150;
 
-use crate::code150::three_sum::Solution;
+use crate::code150::contain_water::Solution;
 
 fn main() {
-   let numbers = vec![-1, 0, 1, 2, -1, -4];
-   let result = Solution::three_sum(numbers);
+   let heights = vec![1,8,6,2,5,4,8,3,7];
+   let result = Solution::max_area(heights);
    println!("The answer to this is {:?}", result);
 }
