@@ -9,8 +9,8 @@ impl Solution {
         let mut max_r: i32 = 0;
 
         while l < r {
-            if (height[l] < height[r]){
-                if (max_l > height[l]){
+            if height[l] < height[r] {
+                if max_l > height[l] {
                     res += max_l - height[l];
                 }
                 else {
@@ -19,7 +19,7 @@ impl Solution {
                 l += 1;
             }
             else {
-                if (max_r > height[r]){
+                if max_r > height[r] {
                     res += max_r - height[r];
                 }
                 else {

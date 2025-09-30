@@ -1,9 +1,9 @@
 mod code150;
 
-use crate::code150::trap_water::Solution;
+use crate::code150::time_to_buy::Solution;
 
 fn main() {
-    let height = vec![0,1,0,2,1,0,1,3,2,1,2,1];
-    let result = Solution::trap(height);
-    println!("The answer to this is {:?}", result);
+    let prices = vec![7, 1, 5, 3, 6, 4];
+    let max_profit = Solution::max_profit(prices);
+    println!("Max profit: {}", max_profit);
 }
