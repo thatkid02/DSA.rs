@@ -15,3 +15,4 @@ pub mod contain_water;
 pub mod trap_water;
 pub mod time_to_buy;
 pub mod long_subs;
+pub mod longest_character_replace;
