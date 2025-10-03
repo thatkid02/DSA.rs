@@ -1,10 +1,10 @@
 mod code150;
 
-use crate::code150::longest_character_replace::Solution;
+use crate::code150::permutation_string::Solution;
 
 fn main() {
-    let s = String::from("AABABBA");
-    let k = 1;
-    let length = Solution::character_replacement(s, k);
-    println!("Res: {}", length);
+    let s1 = String::from("ab");
+    let s2 = String::from("eidbaooo");
+    let result = Solution::check_inclusion(s1, s2);
+    println!("Result: {}", result);
 }
