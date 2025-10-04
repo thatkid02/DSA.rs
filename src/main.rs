@@ -1,10 +1,10 @@
 mod code150;
 
-use crate::code150::permutation_string::Solution;
+use crate::code150::min_window::Solution;
 
 fn main() {
-    let s1 = String::from("ab");
-    let s2 = String::from("eidbaooo");
-    let result = Solution::check_inclusion(s1, s2);
+    let s = String::from("ADOBECODEBANC");
+    let t = String::from("ABC");
+    let result = Solution::min_window(s, t);
     println!("Result: {}", result);
 }

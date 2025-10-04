@@ -17,3 +17,4 @@ pub mod time_to_buy;
 pub mod long_subs;
 pub mod longest_character_replace;
 pub mod permutation_string;
+pub mod min_window;
