@@ -1,10 +1,10 @@
 mod code150;
 
-use crate::code150::min_window::Solution;
+use crate::code150::max_sliding_window::Solution;
 
 fn main() {
-    let s = String::from("ADOBECODEBANC");
-    let t = String::from("ABC");
-    let result = Solution::min_window(s, t);
-    println!("Result: {}", result);
+    let nums = vec![1,3,-1,-3,5,3,6,7];
+    let k = 3;
+    let result = Solution::max_sliding_window(nums, k);
+    println!("Result: {:?}", result);
 }
