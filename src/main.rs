@@ -1,10 +1,9 @@
 mod code150;
 
-use crate::code150::max_sliding_window::Solution;
+use crate::code150::valid_parentheses::Solution;
 
 fn main() {
-    let nums = vec![1,3,-1,-3,5,3,6,7];
-    let k = 3;
-    let result = Solution::max_sliding_window(nums, k);
-    println!("Result: {:?}", result);
+    let test_str = "{[()]}".to_string();
+    let result = Solution::is_valid(test_str);
+    println!("Is valid parentheses: {}", result);
 }
