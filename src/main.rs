@@ -1,9 +1,15 @@
 mod code150;
 
-use crate::code150::valid_parentheses::Solution;
+use crate::code150::min_stack::MinStack;
 
 fn main() {
-    let test_str = "{[()]}".to_string();
-    let result = Solution::is_valid(test_str);
-    println!("Is valid parentheses: {}", result);
+    let mut min_stack = MinStack::new();
+    min_stack.push(5);
+    min_stack.push(2);
+    min_stack.push(8);
+    println!("Top element: {}", min_stack.top());
+    println!("min element: {}", min_stack.get_min());
+    min_stack.pop();
+    println!("Top element after pop: {}", min_stack.top());
+    println!("min element after pop: {}", min_stack.get_min());
 }
