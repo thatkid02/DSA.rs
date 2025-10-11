@@ -1,10 +1,8 @@
 mod code150;
 
-use crate::code150::daily_temperatures::Solution;
+use crate::code150::car_fleet::Solution;
 
 fn main() {
-    let result = Solution::daily_temperatures(vec![73, 74, 75, 71, 69, 72, 76, 73]);
-    for r in result {
-        println!("{}", r);
-    }
+    let result = Solution::car_fleet(12, vec![10, 8, 0, 5, 3], vec![2, 4, 1, 1, 3]);
+    println!("{}", result);
 }
