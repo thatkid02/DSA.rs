@@ -25,3 +25,4 @@ pub mod reverse_polish;
 pub mod generate_parenthesis;
 pub mod daily_temperatures;
 pub mod car_fleet;
+pub mod histogram;
