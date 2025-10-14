@@ -1,8 +1,14 @@
 mod code150;
 
-use crate::code150::binary_search::Solution;
+use crate::code150::search_matrix::Solution;
 
 fn main() {
-    let result = Solution::search(vec![-1,0,3,5,9,12], 9);
+    let matrix = vec![
+        vec![1, 3, 5, 7],
+        vec![10, 11, 16, 20],
+        vec![23, 30, 34, 60],
+    ];
+    let target = 3;
+    let result = Solution::search_matrix(matrix, target);
     println!("result: {result}");
 }

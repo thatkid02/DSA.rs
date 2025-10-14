@@ -27,3 +27,4 @@ pub mod daily_temperatures;
 pub mod car_fleet;
 pub mod histogram;
 pub mod binary_search;
+pub mod search_matrix;
