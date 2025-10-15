@@ -3,7 +3,13 @@ pub struct Solution;
 impl Solution {
     pub fn generate_parenthesis(n: i32) -> Vec<String> {
         let mut res = Vec::new();
-        Self::solver(n as usize, 0, 0, &mut String::with_capacity(n as usize * 2), &mut res);
+        Self::solver(
+            n as usize,
+            0,
+            0,
+            &mut String::with_capacity(n as usize * 2),
+            &mut res,
+        );
         res
     }
 

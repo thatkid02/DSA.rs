@@ -11,16 +11,16 @@ impl Solution {
         let mut low: i32 = 0;
         let mut high: i32 = m * n - 1;
 
-        while low <= high{
+        while low <= high {
             let mid: i32 = low + (high - low) / 2;
             let mid_row: usize = (mid / n) as usize;
             let mid_col: usize = (mid % n) as usize;
-            
-            if matrix[mid_row][mid_col] == target{
+
+            if matrix[mid_row][mid_col] == target {
                 return true;
-            }else if matrix[mid_row][mid_col] > target {
+            } else if matrix[mid_row][mid_col] > target {
                 high = mid - 1;
-            }else {
+            } else {
                 low = mid + 1;
             }
         }

@@ -4,7 +4,7 @@ use std::collections::HashSet;
 impl Solution {
     pub fn is_valid_sudoku(board: Vec<Vec<char>>) -> bool {
         let mut r = vec![HashSet::new(); 9];
-        let mut c  = vec![HashSet::new(); 9];
+        let mut c = vec![HashSet::new(); 9];
         let mut boxes = vec![HashSet::new(); 9];
 
         for i in 0..9 {
@@ -20,10 +20,7 @@ impl Solution {
 
                 let k = (i / 3) * 3 + (j / 3);
 
-                if r[i].contains(&ch)
-                    || c[j].contains(&ch)
-                    || boxes[k].contains(&ch)
-                {
+                if r[i].contains(&ch) || c[j].contains(&ch) || boxes[k].contains(&ch) {
                     return false;
                 }
 

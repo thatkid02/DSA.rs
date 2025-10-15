@@ -25,4 +25,4 @@ impl Solution {
         }
         result
     }
-}   
+}

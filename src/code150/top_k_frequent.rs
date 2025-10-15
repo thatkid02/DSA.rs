@@ -12,6 +12,10 @@ impl Solution {
         let mut freq_vec: Vec<_> = freq_map.into_iter().collect();
         freq_vec.sort_unstable_by_key(|&(_, count)| -count);
 
-        freq_vec.into_iter().take(k as usize).map(|(num, _)| num).collect()
+        freq_vec
+            .into_iter()
+            .take(k as usize)
+            .map(|(num, _)| num)
+            .collect()
     }
 }

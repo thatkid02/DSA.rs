@@ -5,7 +5,7 @@ impl Solution {
     pub fn largest_rectangle_area(heights: Vec<i32>) -> i32 {
         let mut stack = Vec::new();
         let mut res = 0;
-        let mut i     = 0;
+        let mut i = 0;
 
         while i < heights.len() {
             if stack.last().map_or(true, |&j| heights[j] <= heights[i]) {

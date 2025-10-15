@@ -1,10 +1,9 @@
 mod code150;
 
-use crate::code150::binary_range::Solution;
+use crate::code150::min_sort::Solution;
 
 fn main() {
     let piles = vec![3, 6, 7, 11];
-    let h = 8;
-    let result = Solution::min_eating_speed(piles, h);
-    println!("result: {result}");
+    let ans = Solution::find_min(piles);
+    println!("{ans}");
 }

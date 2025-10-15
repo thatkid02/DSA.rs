@@ -8,7 +8,10 @@ impl Solution {
 
         while l <= r {
             let m = l + (r - l) / 2;
-            let hours: i64 = piles.iter().map(|&value| ((value as i64 + m - 1) / m) as i64).sum();
+            let hours: i64 = piles
+                .iter()
+                .map(|&value| ((value as i64 + m - 1) / m) as i64)
+                .sum();
 
             if hours <= h as i64 {
                 res = res.min(m);

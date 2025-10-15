@@ -1,4 +1,3 @@
-
 pub struct Solution;
 
 impl Solution {
@@ -17,6 +16,6 @@ impl Solution {
             res[i] *= right_product;
             right_product *= nums[i];
         }
-        res    
+        res
     }
 }
