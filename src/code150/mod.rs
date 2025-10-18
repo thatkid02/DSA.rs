@@ -31,3 +31,5 @@ pub mod valid_palindrome;
 pub mod valid_parentheses;
 pub mod valid_sudoku;
 pub mod rotate_search;
+pub mod rotated_search;
+
