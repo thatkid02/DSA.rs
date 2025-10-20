@@ -33,4 +33,5 @@ pub mod valid_sudoku;
 pub mod rotate_search;
 pub mod rotated_search;
 pub mod time_map;
+pub mod median_sort_array;
 

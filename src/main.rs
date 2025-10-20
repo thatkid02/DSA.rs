@@ -1,12 +1,10 @@
 mod code150;
 
-use crate::code150::time_map::TimeMap;
+use crate::code150::median_sort_array::Solution;
 
 fn main() {
-        let mut time_map = TimeMap::new();
-        time_map.set("foo".to_string(), "bar".to_string(), 1);
-        let value = time_map.get("foo".to_string(), 1);
-        println!("Value at timestamp 1: {}", value);
-        let value2 = time_map.get("foo".to_string(), 3);
-        println!("Value at timestamp 3: {}", value2);
+    let nums1 = vec![1, 3];
+    let nums2 = vec![2];
+    let median = Solution::find_median_sorted_arrays(nums1, nums2);
+    println!("Median: {}", median);
 }
