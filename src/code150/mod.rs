@@ -34,4 +34,5 @@ pub mod rotate_search;
 pub mod rotated_search;
 pub mod time_map;
 pub mod median_sort_array;
+pub mod reverse_linked_list;
 
