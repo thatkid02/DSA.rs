@@ -1,12 +1,10 @@
 mod code150;
 
-use crate::code150::reverse_linked_list::{ListNode, Solution};
+use crate::code150::merge_sorted_list::{ListNode, Solution};
 
 fn main() {
-    let mut head = Some(Box::new(ListNode::new(1)));
-    head.as_mut().unwrap().next = Some(Box::new(ListNode::new(2)));
-    head.as_mut().unwrap().next.as_mut().unwrap().next = Some(Box::new(ListNode::new(3)));
-
-    let reversed = Solution::reverse_list(head);
-    println!("Reversed: {:?}", reversed);
+    let list1 = Some(Box::new(ListNode::new(1)));
+    let list2 = Some(Box::new(ListNode::new(2)));
+    let merged = Solution::merge_two_lists(list1, list2);
+    println!("Merged: {:?}", merged);
 }
