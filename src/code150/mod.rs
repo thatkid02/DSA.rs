@@ -38,3 +38,4 @@ pub mod reverse_linked_list;
 pub mod merge_sorted_list;
 pub mod linked_list_cycle;
 pub mod reorder_list;
+pub mod copy_random_list;
