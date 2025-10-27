@@ -18,11 +18,11 @@ impl Solution {
             return None;
         }
         let a = match l1 {
-            Some(T) => *T,
+            Some(t) => *t,
             None => ListNode::new(0),
         };
         let b = match l2 {
-            Some(T) => *T,
+            Some(t) => *t,
             None => ListNode::new(0),
         };
         let  val_raw : i32 = a.val + b.val + *carry;

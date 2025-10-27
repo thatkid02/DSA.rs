@@ -40,3 +40,4 @@ pub mod linked_list_cycle;
 pub mod reorder_list;
 pub mod copy_random_list;
 pub mod add_two_link;
+pub mod find_duplicate;
