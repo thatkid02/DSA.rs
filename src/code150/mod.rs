@@ -42,3 +42,4 @@ pub mod copy_random_list;
 pub mod add_two_link;
 pub mod find_duplicate;
 pub mod lru_cache;
+pub mod merge_k_list;

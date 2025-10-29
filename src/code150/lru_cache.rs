@@ -49,7 +49,7 @@ impl LeastRecentlyUsedCache {
                 if *addr == self.head {
                     Some(val)
                 } else if *addr == self.nodes[self.head].new {
-                    self.add_latest(key, None);
+                    self.add_new(key, None);
                     Some(val)
                 } else {
                     self.update_non_head_or_tail(*addr, None);
@@ -98,7 +98,7 @@ impl LeastRecentlyUsedCache {
     }
 
     fn add_new(&mut self, key: i32, value: Option<i32>) {
-        self.head = self.nodes[self.head].new; 
+        self.head = self.nodes[self.head].new;
 
         let node_to_replace = &mut self.nodes[self.head];
 
