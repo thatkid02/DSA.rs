@@ -1,21 +1,35 @@
 mod code150;
 
 fn main() {
-    use code150::reverse_k_group::{ListNode, Solution};
+    use code150::invert_tree::{Solution, TreeNode};
+    use std::cell::RefCell;
+    use std::rc::Rc;
 
-    let mut head = Some(Box::new(ListNode::new(1)));
-    head.as_mut().unwrap().next = Some(Box::new(ListNode::new(2)));
-    head.as_mut().unwrap().next.as_mut().unwrap().next = Some(Box::new(ListNode::new(3)));
-    head.as_mut().unwrap().next.as_mut().unwrap().next.as_mut().unwrap().next = Some(Box::new(ListNode::new(4)));
-    head.as_mut().unwrap().next.as_mut().unwrap().next.as_mut().unwrap().next.as_mut().unwrap().next = Some(Box::new(ListNode::new(5)));
+    type TreeRef = Rc<RefCell<TreeNode>>;
 
-    let k = 2;
-    let reversed = Solution::reverse_k_group(head, k);
+    let root = Some(Rc::new(RefCell::new(TreeNode {
+        val: 1,
+        left: Some(Rc::new(RefCell::new(TreeNode {
+            val: 2,
+            left: None,
+            right: None,
+        }))),
+        right: Some(Rc::new(RefCell::new(TreeNode {
+            val: 3,
+            left: None,
+            right: None,
+        }))),
+    })));
 
-    let mut current = reversed;
-    while let Some(node) = current {
-        print!("{} ", node.val);
-        current = node.next;
+    let inverted = Solution::invert_tree(root);
+
+    if let Some(ref node) = inverted {
+        println!("Inverted tree root: {}", node.borrow().val);
+        if let Some(ref left) = node.borrow().left {
+            println!("Left child: {}", left.borrow().val);
+        }
+        if let Some(ref right) = node.borrow().right {
+            println!("Right child: {}", right.borrow().val);
+        }
     }
-    println!();
 }
