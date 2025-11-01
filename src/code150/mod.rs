@@ -45,3 +45,4 @@ pub mod lru_cache;
 pub mod merge_k_list;
 pub mod reverse_k_group;
 pub mod invert_tree;
+pub mod max_depth_binary_tree;
