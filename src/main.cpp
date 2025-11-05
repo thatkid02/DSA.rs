@@ -2,31 +2,22 @@
 
 using namespace std;
 
-struct TreeNode {
-  int val;
-  TreeNode* left;
-  TreeNode* right;
-  TreeNode() : val(0), left(nullptr), right(nullptr) {}
-  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-  TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
-};
-
-#include "code150/same_tree.cpp"
+#include "code150/subtree_another_tree.cpp"
 
 int main() {
   Solution sol;
 
-  TreeNode* p1 = new TreeNode(1);
-  TreeNode* p2 = new TreeNode(1);
-  TreeNode* p3 = new TreeNode(2);
-  TreeNode* p4 = new TreeNode(2);
-  p1->left = p2;
-  p1->right = p3;
-  p4->left = p2;
-  p4->right = p3;
+  TreeNode* s1 = new TreeNode(3);
+  s1->left = new TreeNode(4);
+  s1->right = new TreeNode(5);
+  s1->left->left = new TreeNode(1);
+  s1->left->right = new TreeNode(2);
+  s1->left->right->left = new TreeNode(0);
 
-  bool result = sol.isSameTree(p1, p4);
-  cout << "Trees are the same: " << (result ? "true" : "false") << endl;
+  TreeNode* t1 = new TreeNode(4);
+  t1->left = new TreeNode(1);
+  t1->right = new TreeNode(2);  
+  cout << sol.isSubtree(s1, t1) << endl;
 
   return 0;
 }
