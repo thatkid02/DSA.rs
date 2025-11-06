@@ -2,22 +2,29 @@
 
 using namespace std;
 
-#include "code150/subtree_another_tree.cpp"
+#include "code150/lowest_common_binary.cpp"
 
 int main() {
   Solution sol;
 
-  TreeNode* s1 = new TreeNode(3);
-  s1->left = new TreeNode(4);
-  s1->right = new TreeNode(5);
-  s1->left->left = new TreeNode(1);
-  s1->left->right = new TreeNode(2);
-  s1->left->right->left = new TreeNode(0);
+  TreeNode* root = new TreeNode(6);
+  TreeNode* p = new TreeNode(2);
+  TreeNode* q = new TreeNode(8);
+  root->left = p;
+  root->right = q;
+  p->left = new TreeNode(0);
+  p->right = new TreeNode(4);
+  p->right->left = new TreeNode(3);
+  p->right->right = new TreeNode(5);
+  q->left = new TreeNode(7);
+  q->right = new TreeNode(9);
 
-  TreeNode* t1 = new TreeNode(4);
-  t1->left = new TreeNode(1);
-  t1->right = new TreeNode(2);  
-  cout << sol.isSubtree(s1, t1) << endl;
+  TreeNode* ancestor = sol.lowestCommonAncestor(root, p, q);
+  if (ancestor) {
+    cout << "Lowest Common Ancestor: " << ancestor->val << endl;
+  } else {
+    cout << "No Common Ancestor found." << endl;
+  }
 
   return 0;
 }
